@@ -3,7 +3,7 @@ package policy_client_test
 import (
 	"encoding/json"
 	"errors"
-	"lib/policy_client"
+	"code.cloudfoundry.org/policy_client"
 
 	hfakes "code.cloudfoundry.org/cf-networking-helpers/fakes"
 

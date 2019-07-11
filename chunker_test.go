@@ -1,7 +1,7 @@
 package policy_client_test
 
 import (
-	"lib/policy_client"
+	"code.cloudfoundry.org/policy_client"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
