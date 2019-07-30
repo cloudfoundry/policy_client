@@ -8,6 +8,12 @@ import (
 	"code.cloudfoundry.org/lager"
 )
 
+//go:generate counterfeiter -o fakes/internal_policy_client.go --fake-name InternalPolicyClient . InternalPolicyClient
+type InternalPolicyClient interface {
+       GetPolicies() ([]Policy, []EgressPolicy, error)
+}
+
+
 type InternalClient struct {
 	JsonClient json_client.JsonClient
 }
