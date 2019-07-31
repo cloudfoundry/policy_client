@@ -63,7 +63,7 @@ var _ = Describe("InternalClient", func() {
 			Expect(route).To(Equal("/networking/v1/internal/policies"))
 			Expect(reqData).To(BeNil())
 
-			Expect(policies).To(Equal([]policy_client.Policy{
+			Expect(policies).To(Equal([]*policy_client.Policy{
 				{
 					Source: policy_client.Source{
 						ID:  "some-app-guid",
@@ -80,7 +80,7 @@ var _ = Describe("InternalClient", func() {
 				},
 			},
 			))
-			Expect(egressPolicies).To(Equal([]policy_client.EgressPolicy{
+			Expect(egressPolicies).To(Equal([]*policy_client.EgressPolicy{
 				{
 					Source: &policy_client.EgressSource{
 						ID: "some-other-app-guid",

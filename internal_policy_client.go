@@ -10,7 +10,7 @@ import (
 
 //go:generate counterfeiter -o fakes/internal_policy_client.go --fake-name InternalPolicyClient . InternalPolicyClient
 type InternalPolicyClient interface {
-       GetPolicies() ([]Policy, []EgressPolicy, error)
+       GetPolicies() ([]*Policy, []*EgressPolicy, error)
 }
 
 
@@ -29,10 +29,10 @@ func NewInternal(logger lager.Logger, httpClient json_client.HttpClient, baseURL
 	}
 }
 
-func (c *InternalClient) GetPolicies() ([]Policy, []EgressPolicy, error) {
+func (c *InternalClient) GetPolicies() ([]*Policy, []*EgressPolicy, error) {
 	var policies struct {
-		Policies       []Policy       `json:"policies"`
-		EgressPolicies []EgressPolicy `json:"egress_policies"`
+		Policies       []*Policy       `json:"policies"`
+		EgressPolicies []*EgressPolicy `json:"egress_policies"`
 	}
 	err := c.JsonClient.Do("GET", "/networking/v1/internal/policies", nil, &policies, "")
 	if err != nil {
