@@ -31,15 +31,16 @@ func (fake *InternalPolicyClient) GetPolicies() ([]*policy_client.Policy, []*pol
 	ret, specificReturn := fake.getPoliciesReturnsOnCall[len(fake.getPoliciesArgsForCall)]
 	fake.getPoliciesArgsForCall = append(fake.getPoliciesArgsForCall, struct {
 	}{})
+	stub := fake.GetPoliciesStub
+	fakeReturns := fake.getPoliciesReturns
 	fake.recordInvocation("GetPolicies", []interface{}{})
 	fake.getPoliciesMutex.Unlock()
-	if fake.GetPoliciesStub != nil {
-		return fake.GetPoliciesStub()
+	if stub != nil {
+		return stub()
 	}
 	if specificReturn {
 		return ret.result1, ret.result2, ret.result3
 	}
-	fakeReturns := fake.getPoliciesReturns
 	return fakeReturns.result1, fakeReturns.result2, fakeReturns.result3
 }
 
