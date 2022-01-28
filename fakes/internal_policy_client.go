@@ -22,6 +22,19 @@ type InternalPolicyClient struct {
 		result2 []*policy_client.EgressPolicy
 		result3 error
 	}
+	GetSecurityGroupsForSpaceStub        func([]string) ([]*policy_client.SecurityGroup, error)
+	getSecurityGroupsForSpaceMutex       sync.RWMutex
+	getSecurityGroupsForSpaceArgsForCall []struct {
+		arg1 []string
+	}
+	getSecurityGroupsForSpaceReturns struct {
+		result1 []*policy_client.SecurityGroup
+		result2 error
+	}
+	getSecurityGroupsForSpaceReturnsOnCall map[int]struct {
+		result1 []*policy_client.SecurityGroup
+		result2 error
+	}
 	invocations      map[string][][]interface{}
 	invocationsMutex sync.RWMutex
 }
@@ -85,11 +98,82 @@ func (fake *InternalPolicyClient) GetPoliciesReturnsOnCall(i int, result1 []*pol
 	}{result1, result2, result3}
 }
 
+func (fake *InternalPolicyClient) GetSecurityGroupsForSpace(arg1 []string) ([]*policy_client.SecurityGroup, error) {
+	var arg1Copy []string
+	if arg1 != nil {
+		arg1Copy = make([]string, len(arg1))
+		copy(arg1Copy, arg1)
+	}
+	fake.getSecurityGroupsForSpaceMutex.Lock()
+	ret, specificReturn := fake.getSecurityGroupsForSpaceReturnsOnCall[len(fake.getSecurityGroupsForSpaceArgsForCall)]
+	fake.getSecurityGroupsForSpaceArgsForCall = append(fake.getSecurityGroupsForSpaceArgsForCall, struct {
+		arg1 []string
+	}{arg1Copy})
+	stub := fake.GetSecurityGroupsForSpaceStub
+	fakeReturns := fake.getSecurityGroupsForSpaceReturns
+	fake.recordInvocation("GetSecurityGroupsForSpace", []interface{}{arg1Copy})
+	fake.getSecurityGroupsForSpaceMutex.Unlock()
+	if stub != nil {
+		return stub(arg1)
+	}
+	if specificReturn {
+		return ret.result1, ret.result2
+	}
+	return fakeReturns.result1, fakeReturns.result2
+}
+
+func (fake *InternalPolicyClient) GetSecurityGroupsForSpaceCallCount() int {
+	fake.getSecurityGroupsForSpaceMutex.RLock()
+	defer fake.getSecurityGroupsForSpaceMutex.RUnlock()
+	return len(fake.getSecurityGroupsForSpaceArgsForCall)
+}
+
+func (fake *InternalPolicyClient) GetSecurityGroupsForSpaceCalls(stub func([]string) ([]*policy_client.SecurityGroup, error)) {
+	fake.getSecurityGroupsForSpaceMutex.Lock()
+	defer fake.getSecurityGroupsForSpaceMutex.Unlock()
+	fake.GetSecurityGroupsForSpaceStub = stub
+}
+
+func (fake *InternalPolicyClient) GetSecurityGroupsForSpaceArgsForCall(i int) []string {
+	fake.getSecurityGroupsForSpaceMutex.RLock()
+	defer fake.getSecurityGroupsForSpaceMutex.RUnlock()
+	argsForCall := fake.getSecurityGroupsForSpaceArgsForCall[i]
+	return argsForCall.arg1
+}
+
+func (fake *InternalPolicyClient) GetSecurityGroupsForSpaceReturns(result1 []*policy_client.SecurityGroup, result2 error) {
+	fake.getSecurityGroupsForSpaceMutex.Lock()
+	defer fake.getSecurityGroupsForSpaceMutex.Unlock()
+	fake.GetSecurityGroupsForSpaceStub = nil
+	fake.getSecurityGroupsForSpaceReturns = struct {
+		result1 []*policy_client.SecurityGroup
+		result2 error
+	}{result1, result2}
+}
+
+func (fake *InternalPolicyClient) GetSecurityGroupsForSpaceReturnsOnCall(i int, result1 []*policy_client.SecurityGroup, result2 error) {
+	fake.getSecurityGroupsForSpaceMutex.Lock()
+	defer fake.getSecurityGroupsForSpaceMutex.Unlock()
+	fake.GetSecurityGroupsForSpaceStub = nil
+	if fake.getSecurityGroupsForSpaceReturnsOnCall == nil {
+		fake.getSecurityGroupsForSpaceReturnsOnCall = make(map[int]struct {
+			result1 []*policy_client.SecurityGroup
+			result2 error
+		})
+	}
+	fake.getSecurityGroupsForSpaceReturnsOnCall[i] = struct {
+		result1 []*policy_client.SecurityGroup
+		result2 error
+	}{result1, result2}
+}
+
 func (fake *InternalPolicyClient) Invocations() map[string][][]interface{} {
 	fake.invocationsMutex.RLock()
 	defer fake.invocationsMutex.RUnlock()
 	fake.getPoliciesMutex.RLock()
 	defer fake.getPoliciesMutex.RUnlock()
+	fake.getSecurityGroupsForSpaceMutex.RLock()
+	defer fake.getSecurityGroupsForSpaceMutex.RUnlock()
 	copiedInvocations := map[string][][]interface{}{}
 	for key, value := range fake.invocations {
 		copiedInvocations[key] = value
