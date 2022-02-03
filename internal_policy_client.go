@@ -19,6 +19,10 @@ type Config struct {
 	PerPageSecurityGroups int
 }
 
+var DefaultConfig = Config{
+	PerPageSecurityGroups: 5000,
+}
+
 type InternalClient struct {
 	JsonClient json_client.JsonClient
 	Config     Config
