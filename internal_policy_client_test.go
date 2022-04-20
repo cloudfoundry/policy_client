@@ -102,7 +102,7 @@ var _ = Describe("InternalClient", func() {
 		})
 
 		It("does the right json http client request", func() {
-			policies, egressPolicies, err := client.GetPolicies()
+			policies, err := client.GetPolicies()
 			Expect(err).NotTo(HaveOccurred())
 
 			Expect(jsonClient.DoCallCount()).To(Equal(1))
@@ -128,32 +128,6 @@ var _ = Describe("InternalClient", func() {
 				},
 			},
 			))
-			Expect(egressPolicies).To(Equal([]*policy_client.EgressPolicy{
-				{
-					Source: &policy_client.EgressSource{
-						ID: "some-other-app-guid",
-					},
-					Destination: &policy_client.EgressDestination{
-						Protocol: "tcp",
-						IPRanges: []policy_client.IPRange{
-							{Start: "1.2.3.4", End: "1.2.3.5"},
-						},
-					},
-				},
-				{
-					Source: &policy_client.EgressSource{
-						ID: "some-other-app-guid",
-					},
-					Destination: &policy_client.EgressDestination{
-						Protocol: "icmp",
-						ICMPType: 8,
-						ICMPCode: 4,
-						IPRanges: []policy_client.IPRange{
-							{Start: "1.2.3.4", End: "1.2.3.5"},
-						},
-					},
-				},
-			}))
 			Expect(token).To(BeEmpty())
 		})
 
@@ -162,7 +136,7 @@ var _ = Describe("InternalClient", func() {
 				jsonClient.DoReturns(errors.New("banana"))
 			})
 			It("returns the error", func() {
-				_, _, err := client.GetPolicies()
+				_, err := client.GetPolicies()
 				Expect(err).To(MatchError("banana"))
 			})
 		})
@@ -178,7 +152,7 @@ var _ = Describe("InternalClient", func() {
 		})
 
 		It("does the right json http client request", func() {
-			policies, egressPolicies, err := client.GetPoliciesByID("some-app-guid", "some-other-app-guid")
+			policies, err := client.GetPoliciesByID("some-app-guid", "some-other-app-guid")
 			Expect(err).NotTo(HaveOccurred())
 
 			Expect(jsonClient.DoCallCount()).To(Equal(1))
@@ -204,32 +178,6 @@ var _ = Describe("InternalClient", func() {
 				},
 			},
 			))
-			Expect(egressPolicies).To(Equal([]policy_client.EgressPolicy{
-				{
-					Source: &policy_client.EgressSource{
-						ID: "some-other-app-guid",
-					},
-					Destination: &policy_client.EgressDestination{
-						Protocol: "tcp",
-						IPRanges: []policy_client.IPRange{
-							{Start: "1.2.3.4", End: "1.2.3.5"},
-						},
-					},
-				},
-				{
-					Source: &policy_client.EgressSource{
-						ID: "some-other-app-guid",
-					},
-					Destination: &policy_client.EgressDestination{
-						Protocol: "icmp",
-						ICMPType: 8,
-						ICMPCode: 4,
-						IPRanges: []policy_client.IPRange{
-							{Start: "1.2.3.4", End: "1.2.3.5"},
-						},
-					},
-				},
-			}))
 
 			Expect(token).To(BeEmpty())
 		})
@@ -239,7 +187,7 @@ var _ = Describe("InternalClient", func() {
 				jsonClient.DoReturns(errors.New("banana"))
 			})
 			It("returns the error", func() {
-				_, _, err := client.GetPoliciesByID("foo")
+				_, err := client.GetPoliciesByID("foo")
 				Expect(err).To(MatchError("banana"))
 			})
 		})
@@ -247,10 +195,9 @@ var _ = Describe("InternalClient", func() {
 		Context("when ids is empty", func() {
 			BeforeEach(func() {})
 			It("returns an error and does not call the json http client", func() {
-				policies, egressPolicies, err := client.GetPoliciesByID()
+				policies, err := client.GetPoliciesByID()
 				Expect(err).To(MatchError("ids cannot be empty"))
 				Expect(policies).To(BeNil())
-				Expect(egressPolicies).To(BeNil())
 				Expect(jsonClient.DoCallCount()).To(Equal(0))
 			})
 		})
@@ -343,7 +290,7 @@ var _ = Describe("InternalClient", func() {
 				jsonClient.DoReturns(errors.New("banana"))
 			})
 			It("returns the error", func() {
-				_, _, err := client.GetPoliciesByID("foo")
+				_, err := client.GetPoliciesByID("foo")
 				Expect(err).To(MatchError("banana"))
 			})
 		})
