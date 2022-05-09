@@ -8,19 +8,17 @@ import (
 )
 
 type InternalPolicyClient struct {
-	GetPoliciesStub        func() ([]*policy_client.Policy, []*policy_client.EgressPolicy, error)
+	GetPoliciesStub        func() ([]*policy_client.Policy, error)
 	getPoliciesMutex       sync.RWMutex
 	getPoliciesArgsForCall []struct {
 	}
 	getPoliciesReturns struct {
 		result1 []*policy_client.Policy
-		result2 []*policy_client.EgressPolicy
-		result3 error
+		result2 error
 	}
 	getPoliciesReturnsOnCall map[int]struct {
 		result1 []*policy_client.Policy
-		result2 []*policy_client.EgressPolicy
-		result3 error
+		result2 error
 	}
 	GetSecurityGroupsForSpaceStub        func([]string) ([]*policy_client.SecurityGroup, error)
 	getSecurityGroupsForSpaceMutex       sync.RWMutex
@@ -39,7 +37,7 @@ type InternalPolicyClient struct {
 	invocationsMutex sync.RWMutex
 }
 
-func (fake *InternalPolicyClient) GetPolicies() ([]*policy_client.Policy, []*policy_client.EgressPolicy, error) {
+func (fake *InternalPolicyClient) GetPolicies() ([]*policy_client.Policy, error) {
 	fake.getPoliciesMutex.Lock()
 	ret, specificReturn := fake.getPoliciesReturnsOnCall[len(fake.getPoliciesArgsForCall)]
 	fake.getPoliciesArgsForCall = append(fake.getPoliciesArgsForCall, struct {
@@ -52,9 +50,9 @@ func (fake *InternalPolicyClient) GetPolicies() ([]*policy_client.Policy, []*pol
 		return stub()
 	}
 	if specificReturn {
-		return ret.result1, ret.result2, ret.result3
+		return ret.result1, ret.result2
 	}
-	return fakeReturns.result1, fakeReturns.result2, fakeReturns.result3
+	return fakeReturns.result1, fakeReturns.result2
 }
 
 func (fake *InternalPolicyClient) GetPoliciesCallCount() int {
@@ -63,39 +61,36 @@ func (fake *InternalPolicyClient) GetPoliciesCallCount() int {
 	return len(fake.getPoliciesArgsForCall)
 }
 
-func (fake *InternalPolicyClient) GetPoliciesCalls(stub func() ([]*policy_client.Policy, []*policy_client.EgressPolicy, error)) {
+func (fake *InternalPolicyClient) GetPoliciesCalls(stub func() ([]*policy_client.Policy, error)) {
 	fake.getPoliciesMutex.Lock()
 	defer fake.getPoliciesMutex.Unlock()
 	fake.GetPoliciesStub = stub
 }
 
-func (fake *InternalPolicyClient) GetPoliciesReturns(result1 []*policy_client.Policy, result2 []*policy_client.EgressPolicy, result3 error) {
+func (fake *InternalPolicyClient) GetPoliciesReturns(result1 []*policy_client.Policy, result2 error) {
 	fake.getPoliciesMutex.Lock()
 	defer fake.getPoliciesMutex.Unlock()
 	fake.GetPoliciesStub = nil
 	fake.getPoliciesReturns = struct {
 		result1 []*policy_client.Policy
-		result2 []*policy_client.EgressPolicy
-		result3 error
-	}{result1, result2, result3}
+		result2 error
+	}{result1, result2}
 }
 
-func (fake *InternalPolicyClient) GetPoliciesReturnsOnCall(i int, result1 []*policy_client.Policy, result2 []*policy_client.EgressPolicy, result3 error) {
+func (fake *InternalPolicyClient) GetPoliciesReturnsOnCall(i int, result1 []*policy_client.Policy, result2 error) {
 	fake.getPoliciesMutex.Lock()
 	defer fake.getPoliciesMutex.Unlock()
 	fake.GetPoliciesStub = nil
 	if fake.getPoliciesReturnsOnCall == nil {
 		fake.getPoliciesReturnsOnCall = make(map[int]struct {
 			result1 []*policy_client.Policy
-			result2 []*policy_client.EgressPolicy
-			result3 error
+			result2 error
 		})
 	}
 	fake.getPoliciesReturnsOnCall[i] = struct {
 		result1 []*policy_client.Policy
-		result2 []*policy_client.EgressPolicy
-		result3 error
-	}{result1, result2, result3}
+		result2 error
+	}{result1, result2}
 }
 
 func (fake *InternalPolicyClient) GetSecurityGroupsForSpace(arg1 []string) ([]*policy_client.SecurityGroup, error) {
