@@ -1,11 +1,10 @@
 module code.cloudfoundry.org/policy_client
 
-go 1.17
+go 1.20
 
 require (
 	code.cloudfoundry.org/cf-networking-helpers v0.0.0-20211111210832-d3a705b8ebff
 	code.cloudfoundry.org/lager v2.0.0+incompatible
-	github.com/cloudfoundry/policy_client v0.0.0-20190731000202-6324003c2bfd
 	github.com/onsi/ginkgo v1.16.5
 	github.com/onsi/gomega v1.18.1
 )
