@@ -7,7 +7,7 @@ import (
 	hfakes "code.cloudfoundry.org/cf-networking-helpers/fakes"
 	"code.cloudfoundry.org/policy_client"
 
-	. "github.com/onsi/ginkgo"
+	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 )
 

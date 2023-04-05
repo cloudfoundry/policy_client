@@ -9,7 +9,7 @@ import (
 	"code.cloudfoundry.org/cf-networking-helpers/json_client"
 	. "code.cloudfoundry.org/policy_client"
 	"code.cloudfoundry.org/policy_client/fakes"
-	. "github.com/onsi/ginkgo"
+	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 )
 

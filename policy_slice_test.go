@@ -3,7 +3,7 @@ package policy_client_test
 import (
 	"code.cloudfoundry.org/policy_client"
 
-	. "github.com/onsi/ginkgo"
+	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 )
 
