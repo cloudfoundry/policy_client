@@ -3,10 +3,10 @@ module code.cloudfoundry.org/policy_client
 go 1.20
 
 require (
-	code.cloudfoundry.org/cf-networking-helpers v0.0.0-20230328201556-b3fe61b50608
+	code.cloudfoundry.org/cf-networking-helpers v0.0.0-20230405132800-3ab029b13e12
 	code.cloudfoundry.org/lager/v3 v3.0.1
 	github.com/onsi/ginkgo/v2 v2.9.2
-	github.com/onsi/gomega v1.27.4
+	github.com/onsi/gomega v1.27.5
 )
 
 require (
