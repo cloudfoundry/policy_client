@@ -1,4 +1,3 @@
----
 name: Bug
 description: Report a defect, such as a bug or regression.
 title: "Start the title with a verb (e.g. Change header styles). Use the imperative mood in the title (e.g. Fix, not Fixed or Fixes header styles)"
@@ -29,7 +28,7 @@ body:
     id: desired_md
     attributes:
       value: |
-        - Describe how the problem should be fixed
+        - Describe how the problem should be fixed 
         - Does this require a new bosh release?
         - Does it require configuration changes in cf-deployment?
         - Do we need to have a special release note?
@@ -41,3 +40,5 @@ body:
       description: Please enter the version
     validations:
       required: true
+
+#THIS IS SYNCED from https://github.com/cloudfoundry/wg-app-platform-runtime-ci/tree/-/shared/github
