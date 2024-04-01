@@ -1,0 +1,10 @@
+---
+name: Enhance
+description: something
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: change
+    attributes:
+      label: Proposed Change
