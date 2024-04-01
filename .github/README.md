@@ -1,0 +1,7 @@
+Changing templates
+---------------
+These templates are synced from [these shared tempaltes](https://github.com/cloudfoundry/wg-app-platform-runtime-ci/tree/main/shared/github).
+Each pipeline will contain a "sync-shared-templates-*" job for updating the content of these files.
+If you would like to modify these, please change them in the shared group.
+It's also possible to override the templates on pieline's parent directory by introducing a custom
+template in $PARENT_TEMPLATE_DIR/github/<FILENAME> in CI repo
