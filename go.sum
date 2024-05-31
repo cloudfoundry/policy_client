@@ -1,5 +1,5 @@
-code.cloudfoundry.org/cf-networking-helpers v0.0.0-20240528171056-466c0f1d1c41 h1:Lug1Rq1mfWsY78rXo3Hz1VfUom3mQtc0uIV3sgKnKdw=
-code.cloudfoundry.org/cf-networking-helpers v0.0.0-20240528171056-466c0f1d1c41/go.mod h1:lVrmp9wMYlgs++3AOKndlyRhGXhQ/BCigC4zT2yDU+o=
+code.cloudfoundry.org/cf-networking-helpers v0.0.0-20240530171150-b069076ac7ae h1:uQlsxSJB3X6ifEr0F9rRczJpZaQdnzmCIgLn6PuGXfI=
+code.cloudfoundry.org/cf-networking-helpers v0.0.0-20240530171150-b069076ac7ae/go.mod h1:ysWdUVxZ/aR5zwW8xIxJUcJ4SKnDn0yL10G1ULI0xfs=
 code.cloudfoundry.org/lager/v3 v3.0.3 h1:/UTmadZfIaKuT/whEinSxK1mzRfNu1uPfvjFfGqiwzM=
 code.cloudfoundry.org/lager/v3 v3.0.3/go.mod h1:Zn5q1SrIuuHjEUE7xerMKt3ztunrJQCZETAo7rV0CH8=
 filippo.io/edwards25519 v1.1.0 h1:FNf4tywRC1HmFuKW5xopWpigGjJKiJSV0Cqo0cJWDaA=
@@ -28,7 +28,7 @@ github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZb
 github.com/square/certstrap v1.3.0 h1:N9P0ZRA+DjT8pq5fGDj0z3FjafRKnBDypP0QHpMlaAk=
 github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcUk=
 github.com/tedsuo/ifrit v0.0.0-20230516164442-7862c310ad26 h1:mWCRvpoEMVlslxEvvptKgIUb35va9yj9Oq5wGw/er5I=
-go.step.sm/crypto v0.45.1 h1:Xb8XldsbqT6pDYsg46BVPP1euASNbeNAhzrlvUP3QWo=
+go.step.sm/crypto v0.46.0 h1:cuVZMpDbmEsUX+atC24+VineQr4gO+zO46MxbIVai4Y=
 golang.org/x/crypto v0.23.0 h1:dIJU/v2J8Mdglj/8rJ6UUOM3Zc9zLZxVZwwxMooUSAI=
 golang.org/x/net v0.25.0 h1:d/OCCoBEUq33pjydKrGQhw7IlUPI2Oylr+8qLx49kac=
 golang.org/x/net v0.25.0/go.mod h1:JkAGAh7GEvH74S6FOH42FLoXpXbE/aqXSrIQjXgsiwM=
