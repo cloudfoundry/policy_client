@@ -1,5 +1,5 @@
-code.cloudfoundry.org/cf-networking-helpers v0.0.0-20240807182441-59f538598b8c h1:bNssZYTPv2fG1mFbN2aElpK/0+K9Q/RELuYmEFIhess=
-code.cloudfoundry.org/cf-networking-helpers v0.0.0-20240807182441-59f538598b8c/go.mod h1:LV9P4b2D+PCE6KQRXqoDFCQFJNqvj2IxnvxLBWREInc=
+code.cloudfoundry.org/cf-networking-helpers v0.0.0-20240808182450-b43167c2e534 h1:xO80nro9tPFoSh50icLL5X82Y8eS65E+oSnWhLXCtgg=
+code.cloudfoundry.org/cf-networking-helpers v0.0.0-20240808182450-b43167c2e534/go.mod h1:vv32mbB/UCXTX9xEW3CNFCu3/Gp0XnHUFTlnX+pEEA4=
 code.cloudfoundry.org/lager/v3 v3.0.3 h1:/UTmadZfIaKuT/whEinSxK1mzRfNu1uPfvjFfGqiwzM=
 code.cloudfoundry.org/lager/v3 v3.0.3/go.mod h1:Zn5q1SrIuuHjEUE7xerMKt3ztunrJQCZETAo7rV0CH8=
 filippo.io/edwards25519 v1.1.0 h1:FNf4tywRC1HmFuKW5xopWpigGjJKiJSV0Cqo0cJWDaA=
