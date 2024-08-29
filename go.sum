@@ -1,5 +1,5 @@
-code.cloudfoundry.org/cf-networking-helpers v0.6.0 h1:TSxpOCGwK53M3tH0DUiPottwUA1JgGhqKuc4d1foju8=
-code.cloudfoundry.org/cf-networking-helpers v0.6.0/go.mod h1:zlF5nVP3+drDHw2jjgxDbsBm3XM0h0fSKpiY2sSJFgo=
+code.cloudfoundry.org/cf-networking-helpers v0.7.0 h1:qNUOSaHs2Iw+/RieHMWUjitS1le8IShi5SGhEdkWmiQ=
+code.cloudfoundry.org/cf-networking-helpers v0.7.0/go.mod h1:OJwSVcf2MqiTybLQ2KXDl/f6boHWMKbbh/OsBpYbvgM=
 code.cloudfoundry.org/lager/v3 v3.3.0 h1:adWGo2aBLpHVfUG+3D2FQ4B6Mf2Bcz47KITbn8V4b0k=
 code.cloudfoundry.org/lager/v3 v3.3.0/go.mod h1:k/AYgZTVrwQaneNfQ2EwnZxUb9iUFE7i6AJ3KVOtAdE=
 filippo.io/edwards25519 v1.1.0 h1:FNf4tywRC1HmFuKW5xopWpigGjJKiJSV0Cqo0cJWDaA=
@@ -14,8 +14,8 @@ github.com/go-task/slim-sprig/v3 v3.0.0 h1:sUs3vkvUymDpBKi3qH1YSqBQk9+9D/8M2mN1v
 github.com/go-task/slim-sprig/v3 v3.0.0/go.mod h1:W848ghGpv3Qj3dhTPRyJypKRiqCdHZiAzKg9hl15HA8=
 github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
 github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
-github.com/google/pprof v0.0.0-20240827171923-fa2c70bbbfe5 h1:5iH8iuqE5apketRbSFBy+X1V0o+l+8NF1avt4HWl7cA=
-github.com/google/pprof v0.0.0-20240827171923-fa2c70bbbfe5/go.mod h1:vavhavw2zAxS5dIdcRluK6cSGGPlZynqzFM8NdvU144=
+github.com/google/pprof v0.0.0-20240829160300-da1f7e9f2b25 h1:sEDPKUw6iPjczdu33njxFjO6tYa9bfc0z/QyB/zSsBw=
+github.com/google/pprof v0.0.0-20240829160300-da1f7e9f2b25/go.mod h1:vavhavw2zAxS5dIdcRluK6cSGGPlZynqzFM8NdvU144=
 github.com/jmoiron/sqlx v1.4.0 h1:1PLqN7S1UYp5t4SrVVnt4nUVNemrDAtxlulVe+Qgm3o=
 github.com/jmoiron/sqlx v1.4.0/go.mod h1:ZrZ7UsYB/weZdl2Bxg6jCRO9c3YHl8r3ahlKmRT4JLY=
 github.com/lib/pq v1.10.9 h1:YXG7RB+JIjhP29X+OtkiDnYaXQwpS4JEWq7dtCCRUEw=
