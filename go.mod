@@ -5,8 +5,8 @@ go 1.22.0
 toolchain go1.22.3
 
 require (
-	code.cloudfoundry.org/cf-networking-helpers v0.19.0
-	code.cloudfoundry.org/lager/v3 v3.10.0
+	code.cloudfoundry.org/cf-networking-helpers v0.21.0
+	code.cloudfoundry.org/lager/v3 v3.11.0
 	github.com/onsi/ginkgo/v2 v2.20.2
 	github.com/onsi/gomega v1.34.2
 )
@@ -17,7 +17,7 @@ require (
 	github.com/go-sql-driver/mysql v1.8.1 // indirect
 	github.com/go-task/slim-sprig/v3 v3.0.0 // indirect
 	github.com/google/go-cmp v0.6.0 // indirect
-	github.com/google/pprof v0.0.0-20241017200806-017d972448fc // indirect
+	github.com/google/pprof v0.0.0-20241023014458-598669927662 // indirect
 	github.com/openzipkin/zipkin-go v0.4.3 // indirect
 	golang.org/x/net v0.30.0 // indirect
 	golang.org/x/sys v0.26.0 // indirect
