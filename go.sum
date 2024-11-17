@@ -1,7 +1,7 @@
-code.cloudfoundry.org/cf-networking-helpers v0.24.0 h1:aDCWrsC39yqfIOuGyo4T1Y9O8BCTrdnoEJFrCC4Xgys=
-code.cloudfoundry.org/cf-networking-helpers v0.24.0/go.mod h1:1hqpZ5fAVGx09JENa6Vz3od6aE7g/yzhS63pSDIw8zU=
-code.cloudfoundry.org/lager/v3 v3.14.0 h1:W6W1VhS4df8TvXCVo0lj5ve/hjF6YarmU0hsjA/phg4=
-code.cloudfoundry.org/lager/v3 v3.14.0/go.mod h1:beQQaqGk0JSc5Nl/CZFGPCY05lm/wIRa+RoJh7Hz7jI=
+code.cloudfoundry.org/cf-networking-helpers v0.25.0 h1:XESZz50viLE2qT2B38Tbl2yWzZ046oC4pG5PCFxGVWs=
+code.cloudfoundry.org/cf-networking-helpers v0.25.0/go.mod h1:3wFZ2HUTG5Jxr9XOGPeNJd0+7U/1QdPFyTEofTNZtM0=
+code.cloudfoundry.org/lager/v3 v3.15.0 h1:n31lbeh9krwuQLCRUWNEVZBk/BFEtyhQBwDZxFauPw4=
+code.cloudfoundry.org/lager/v3 v3.15.0/go.mod h1:x5XGPsP6QF0HMW/FpRilBHu4gy+cWRur8/fiZEyj6z8=
 filippo.io/edwards25519 v1.1.0 h1:FNf4tywRC1HmFuKW5xopWpigGjJKiJSV0Cqo0cJWDaA=
 filippo.io/edwards25519 v1.1.0/go.mod h1:BxyFTGdWcka3PhytdK4V28tE5sGfRvvvRV7EaN4VDT4=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
