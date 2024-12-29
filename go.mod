@@ -5,10 +5,10 @@ go 1.22.0
 toolchain go1.22.3
 
 require (
-	code.cloudfoundry.org/cf-networking-helpers v0.30.0
-	code.cloudfoundry.org/lager/v3 v3.19.0
+	code.cloudfoundry.org/cf-networking-helpers v0.31.0
+	code.cloudfoundry.org/lager/v3 v3.20.0
 	github.com/onsi/ginkgo/v2 v2.22.1
-	github.com/onsi/gomega v1.36.1
+	github.com/onsi/gomega v1.36.2
 )
 
 require (
