@@ -237,6 +237,40 @@ var _ = Describe("InternalClient", func() {
 		})
 	})
 
+	Describe("GetSecurityGroupsLastUpdated", func() {
+		BeforeEach(func() {
+			jsonClient.DoStub = func(method, route string, reqData, respData interface{}, token string) error {
+				respBytes := []byte("12345")
+				json.Unmarshal(respBytes, respData)
+				return nil
+			}
+		})
+
+		It("does the right json http client request", func() {
+			lastUpdated, err := client.GetSecurityGroupsLastUpdated()
+			Expect(err).NotTo(HaveOccurred())
+
+			Expect(jsonClient.DoCallCount()).To(Equal(1))
+			method, route, reqData, _, token := jsonClient.DoArgsForCall(0)
+			Expect(method).To(Equal("GET"))
+			Expect(route).To(Equal("/networking/v1/internal/security_groups_last_updated"))
+			Expect(reqData).To(BeNil())
+
+			Expect(lastUpdated).To(Equal(12345))
+			Expect(token).To(BeEmpty())
+		})
+
+		Context("when the json client fails", func() {
+			BeforeEach(func() {
+				jsonClient.DoReturns(errors.New("banana"))
+			})
+			It("returns the error", func() {
+				_, err := client.GetSecurityGroupsLastUpdated()
+				Expect(err).To(MatchError("banana"))
+			})
+		})
+	})
+
 	Describe("GetSecurityGroupsForSpace", func() {
 		BeforeEach(func() {
 			callCount := 0
