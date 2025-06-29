@@ -1,5 +1,5 @@
-code.cloudfoundry.org/cf-networking-helpers v0.47.0 h1:kHOw6K/eaMDuq87uQ/kl1art6MV0e8VvhZeayhuz0AY=
-code.cloudfoundry.org/cf-networking-helpers v0.47.0/go.mod h1:BRbPfwQACMDPGaxmfPR1bmynjXPfb6nSqda0FhEJd7s=
+code.cloudfoundry.org/cf-networking-helpers v0.48.0 h1:TrAdtOUjbpbkZTfj0RJNMCDq82HtzjgfyaSO/ABsZD8=
+code.cloudfoundry.org/cf-networking-helpers v0.48.0/go.mod h1:ASMYCxpSHz6a4sAIO1F6hvC1lWTmyVkvCSWVto/hFYw=
 code.cloudfoundry.org/lager/v3 v3.39.0 h1:axxT3QTIu7ZWNyV7IKtNrSP4xmtMPbgbIJ5lY3ixYU8=
 code.cloudfoundry.org/lager/v3 v3.39.0/go.mod h1:xcAxUZal+NkRwwF40JEY/rouQB/IaIfzjf5wi3jSYUs=
 filippo.io/edwards25519 v1.1.0 h1:FNf4tywRC1HmFuKW5xopWpigGjJKiJSV0Cqo0cJWDaA=
@@ -42,8 +42,8 @@ github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcU
 github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
 github.com/tedsuo/ifrit v0.0.0-20230516164442-7862c310ad26 h1:mWCRvpoEMVlslxEvvptKgIUb35va9yj9Oq5wGw/er5I=
 github.com/tedsuo/ifrit v0.0.0-20230516164442-7862c310ad26/go.mod h1:0uD3VMXkZ7Bw0ojGCwDzebBBzPBXtzEZeXai+56BLX4=
-go.step.sm/crypto v0.66.0 h1:9TW6BEguOtcS9NIjja9bDQ+j8OjhenU/F6lJfHjbXNU=
-go.step.sm/crypto v0.66.0/go.mod h1:anqGyvO/Px05D1mznHq4/a9wwP1I1DmMZvk+TWX5Dzo=
+go.step.sm/crypto v0.67.0 h1:1km9LmxMKG/p+mKa1R4luPN04vlJYnRLlLQrWv7egGU=
+go.step.sm/crypto v0.67.0/go.mod h1:+AoDpB0mZxbW/PmOXuwkPSpXRgaUaoIK+/Wx/HGgtAU=
 go.uber.org/automaxprocs v1.6.0 h1:O3y2/QNTOdbF+e/dpXNNW7Rx2hZ4sTIPyybbxyNqTUs=
 go.uber.org/automaxprocs v1.6.0/go.mod h1:ifeIMSnPZuznNm6jmdzmU3/bfk01Fe2fotchwEFJ8r8=
 golang.org/x/crypto v0.39.0 h1:SHs+kF4LP+f+p14esP5jAoDpHU8Gu/v9lFRK6IT5imM=
