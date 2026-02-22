@@ -3,14 +3,14 @@ module code.cloudfoundry.org/policy_client
 go 1.24.9
 
 require (
-	code.cloudfoundry.org/cf-networking-helpers v0.74.0
+	code.cloudfoundry.org/cf-networking-helpers v0.75.0
 	code.cloudfoundry.org/lager/v3 v3.61.0
 	github.com/onsi/ginkgo/v2 v2.28.1
 	github.com/onsi/gomega v1.39.1
 )
 
 require (
-	filippo.io/edwards25519 v1.1.0 // indirect
+	filippo.io/edwards25519 v1.2.0 // indirect
 	github.com/Masterminds/semver/v3 v3.4.0 // indirect
 	github.com/go-logr/logr v1.4.3 // indirect
 	github.com/go-sql-driver/mysql v1.9.3 // indirect
