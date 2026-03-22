@@ -3,8 +3,8 @@ module code.cloudfoundry.org/policy_client
 go 1.25.0
 
 require (
-	code.cloudfoundry.org/cf-networking-helpers v0.77.0
-	code.cloudfoundry.org/lager/v3 v3.63.0
+	code.cloudfoundry.org/cf-networking-helpers v0.78.0
+	code.cloudfoundry.org/lager/v3 v3.64.0
 	github.com/onsi/ginkgo/v2 v2.28.1
 	github.com/onsi/gomega v1.39.1
 )
