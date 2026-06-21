@@ -4,9 +4,9 @@ go 1.25.8
 
 require (
 	code.cloudfoundry.org/cf-networking-helpers v0.89.0
-	code.cloudfoundry.org/lager/v3 v3.73.0
-	github.com/onsi/ginkgo/v2 v2.30.0
-	github.com/onsi/gomega v1.41.0
+	code.cloudfoundry.org/lager/v3 v3.74.0
+	github.com/onsi/ginkgo/v2 v2.31.0
+	github.com/onsi/gomega v1.42.0
 )
 
 require (
